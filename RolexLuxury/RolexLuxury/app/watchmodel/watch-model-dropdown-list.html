@@ -1,0 +1,22 @@
+﻿    <section *ngIf="isLoading && !errorMessage">
+        Loading...
+    </section> 
+    <div class="row watch-model-dropdown-container">
+        <div class="col-log-12">
+            <div class="row" >
+                <div class="col-lg-6 model-container" *ngFor="let watchModel of allData">
+                    <a routerLink="/RolexLuxury/Watch/WatchModel" routerLinkActive="active">
+                        <input type="hidden" value="{{watchModel.WatchModelId}}" />
+                        <span><img src="img/rolex.jpg" /></span><br />
+                        <span class="model-category">{{watchModel.Category}}</span><br />
+                        <span class="model-short-description">{{watchModel.Description}}</span>
+                    </a>                  
+                </div>
+            </div>
+        </div>
+    </div>
+<!--li *ngFor="let watchModel of allData">
+    <input type="hidden" value="{{watchModel.WatchModelId}}" />
+    <span class="model-category">{{watchModel.Category}}</span><br />
+    <span class="model-short-description">{{watchModel.Description}}</span>
+</li>-->
